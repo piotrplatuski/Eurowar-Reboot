@@ -1,4 +1,4 @@
-# Eurowar-Reboot
+# Eurowar Reboot
 
 ## Introduction
 
@@ -6,4 +6,4 @@ This project contains the code used to calculate stats, generate events and stor
 
 ## Current state
 
-Currently, there are methods for Province, SeaZone and Country
+Currently, there are methods for the `Province`, `SeaZone` and `Country` classes. Updating a Google Sheet is already possible, but not yet systematically programmed. The initialisation of classes is currently being written.
