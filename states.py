@@ -41,16 +41,19 @@ class Province:
     def add_original_owner(self, country):
         self.__original_owner = country
 
-    def set_bordering(self, provinces):
-        for province in provinces:
-            self.__bordering.add(province)
-            province.__bordering.add(self)
+    def set_onedir_bordering(self, region):
+        self.__bordering.add(region)
+
+    def set_bordering(self, regions):
+        for region in regions:
+            self.__bordering.add(region)
+            region.set_onedir_bordering(self)
 
     def get_bordering_codes(self):
-        return {prov.get_code() for prov in self.__bordering}
+        return {region.get_code() for region in self.__bordering}
 
     def get_bordering_names(self):
-        return {prov.get_name() for prov in self.__bordering}
+        return {region.get_name() for region in self.__bordering}
 
     def borders(self, other):
         if other in self.__bordering:
@@ -63,12 +66,33 @@ class SeaZone:
     def __init__(self, code, name=''):
         self.__code = code
         self.__name = name
+        self.__bordering = set()
 
     def get_name(self):
         return self.__name
 
     def set_name(self, name):
         self.__name = name
+
+    def set_onedir_bordering(self, region):
+        self.__bordering.add(region)
+
+    def set_bordering(self, regions):
+        for region in regions:
+            self.__bordering.add(region)
+            region.set_onedir_bordering(self)
+
+    def get_bordering_codes(self):
+        return {region.get_code() for region in self.__bordering}
+
+    def get_bordering_names(self):
+        return {region.get_name() for region in self.__bordering}
+
+    def borders(self, other):
+        if other in self.__bordering:
+            return True
+        else:
+            return False
 
 
 class Country:

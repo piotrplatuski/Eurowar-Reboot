@@ -20,3 +20,8 @@ pot.set_bordering({mex})
 print(mex.get_bordering_codes())
 assert mex.borders(ver) is True
 assert ver.borders(mex) is True
+
+# A test to check if SeaZones and Provinces can be put in a set together
+GOM = SeaZone('GOM', 'Gulf of Mexico')
+yuc.set_bordering({GOM, tab})
+print(yuc.get_bordering_names())
