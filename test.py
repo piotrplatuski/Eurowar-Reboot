@@ -14,7 +14,9 @@ mexico.set_government('dictatorship')
 assert mexico.get_government() == 'dictatorship'
 assert mexico.get_name() == 'Mexico'
 
-mex.set_bordering({ver, gue, pot})
+mex.set_bordering({ver, oax, gue, gua, pot})
 print(pot.get_bordering_names())
 pot.set_bordering({mex})
 print(mex.get_bordering_codes())
+assert mex.bordering(ver) is True
+assert ver.bordering(mex) is True

@@ -52,6 +52,12 @@ class Province:
     def get_bordering_names(self):
         return {prov.get_name() for prov in self.__bordering}
 
+    def bordering(self, other):
+        if other in self.__bordering:
+            return True
+        else:
+            return False
+
 
 class SeaZone:
     def __init__(self, code, name=''):
