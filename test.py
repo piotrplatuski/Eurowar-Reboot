@@ -1,18 +1,15 @@
 from american_map import *
+from states import *
 
-mid = Province('MID', 'Middelland')
-tex = Province('TEX', 'Texas')
-heartland = Country('Heartland', 600, 'republic')
-heartland.add_provinces({mid, tex})
-heartland.change_balance(800)
-mid.add_building('railway')
+mexico.change_balance(4000)
+assert mexico.get_balance() == 4000
+mex.add_building('railway')
+assert mexico.get_balance() == 4000 - prices['railway']
 
-print(mid.get_buildings())
-print(mid.get_owner().get_name())
-print(heartland.get_balance())
-print(heartland.get_provinces_codes())
-print(heartland.get_provinces_names())
-print(heartland.get_buildings())
+mexico.add_provinces({mia})
+print(mexico.get_provinces_names())
+print(mexico.get_cores_codes())
 
-print(peru.get_provinces_names())
-print(peru.get_cores_codes())
+mexico.set_government('dictatorship')
+assert mexico.get_government() == 'dictatorship'
+assert mexico.get_name() == 'Mexico'
