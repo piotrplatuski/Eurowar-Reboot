@@ -99,6 +99,8 @@ class Country:
             return province.get_buildings()
 
 
+# Some tests
+
 mid = Province('MID', 'Middelland')
 tex = Province('TEX', 'Texas')
 heartland = Country('Heartland', 600, 'republic')
