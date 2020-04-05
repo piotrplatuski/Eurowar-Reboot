@@ -52,7 +52,7 @@ class Province:
     def get_bordering_names(self):
         return {prov.get_name() for prov in self.__bordering}
 
-    def bordering(self, other):
+    def borders(self, other):
         if other in self.__bordering:
             return True
         else:
@@ -121,6 +121,11 @@ class Country:
         # double iteration with prices.keys?
         for province in self.__provinces:
             return province.get_buildings()
+
+    def borders(self, other):
+        # to be implemented
+        # for loop
+        pass
 
 
 

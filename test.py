@@ -18,5 +18,5 @@ mex.set_bordering({ver, oax, gue, gua, pot})
 print(pot.get_bordering_names())
 pot.set_bordering({mex})
 print(mex.get_bordering_codes())
-assert mex.bordering(ver) is True
-assert ver.bordering(mex) is True
+assert mex.borders(ver) is True
+assert ver.borders(mex) is True
