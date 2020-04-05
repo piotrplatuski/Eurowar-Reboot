@@ -13,3 +13,8 @@ print(mexico.get_cores_codes())
 mexico.set_government('dictatorship')
 assert mexico.get_government() == 'dictatorship'
 assert mexico.get_name() == 'Mexico'
+
+mex.set_bordering({ver, gue, pot})
+print(pot.get_bordering_names())
+pot.set_bordering({mex})
+print(mex.get_bordering_codes())

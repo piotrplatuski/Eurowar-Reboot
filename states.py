@@ -9,6 +9,7 @@ class Province:
         self.__buildings = set()
         self.__owner = None
         self.__original_owner = None
+        self.__bordering = set()
 
     def get_code(self):
         return self.__code
@@ -39,6 +40,17 @@ class Province:
 
     def add_original_owner(self, country):
         self.__original_owner = country
+
+    def set_bordering(self, provinces):
+        for province in provinces:
+            self.__bordering.add(province)
+            province.__bordering.add(self)
+
+    def get_bordering_codes(self):
+        return {prov.get_code() for prov in self.__bordering}
+
+    def get_bordering_names(self):
+        return {prov.get_name() for prov in self.__bordering}
 
 
 class SeaZone:
