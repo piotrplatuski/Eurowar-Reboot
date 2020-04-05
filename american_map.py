@@ -193,5 +193,3 @@ nic = Province('nic', 'Nicaragua', True)
 pan = Province('pan', 'Panama', True)
 ven = Province('ven', 'Venezuela', True)
 
-print(peru.get_provinces_names())
-print(peru.get_cores_codes())
