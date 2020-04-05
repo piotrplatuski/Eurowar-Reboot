@@ -70,6 +70,12 @@ class Country:
     def get_provinces_names(self):
         return {prov.get_name() for prov in self.__provinces}
 
+    def get_cores_codes(self):
+        return {prov.get_code() for prov in self.__cores}
+
+    def get_cores_names(self):
+        return {prov.get_name() for prov in self.__cores}
+
     def get_balance(self):
         return self.__balance
 
