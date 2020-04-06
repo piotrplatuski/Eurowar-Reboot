@@ -21,7 +21,17 @@ print(mex.get_bordering_codes())
 assert mex.borders(ver) is True
 assert ver.borders(mex) is True
 
-# A test to check if SeaZones and Provinces can be put in a set together
-GOM = SeaZone('GOM', 'Gulf of Mexico')
-yuc.set_bordering({GOM, tab})
-print(yuc.get_bordering_names())
+print(chi.get_bordering_names())
+assert new_york.borders(quebec) is True
+assert heartland.borders(new_york) is False
+assert florida.borders(cuba) is False
+
+quebec.add_provinces({vem})
+new_york.add_provinces({mas})
+assert vem.borders(mas) is True
+
+print('________')
+print(heartland.get_border_with(quebec))
+print(new_york.get_border_with_names(quebec))
+print(heartland.get_border_with_codes(quebec))
+print(new_york.get_border_with_codes(quebec))

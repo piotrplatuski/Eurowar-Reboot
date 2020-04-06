@@ -91,10 +91,10 @@ iow = Province('iow', 'Iowa', False)
 mil = Province('mil', 'Milwaukee', True)
 min = Province('min', 'Minneapolis', True)
 
-chicago = Country('Chicago', 0, 'republic')
+heartland = Country('Heartland', 0, 'republic')
 chi_start_provs = {chi, ind, iow, mil, min}
-chicago.add_cores(chi_start_provs)
-chicago.add_provinces(chi_start_provs)
+heartland.add_cores(chi_start_provs)
+heartland.add_provinces(chi_start_provs)
 
 # FLORIDA
 fpa = Province('fpa', 'Florida Panhandle', False)

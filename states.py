@@ -27,7 +27,7 @@ class Province:
         return self.__buildings
 
     def add_building(self, building):
-        if building not in self.__buildings\
+        if building not in self.get_buildings()\
                 and building in prices.keys():
             self.__buildings.add(building)
             self.__owner.change_balance(-prices[building])
@@ -82,14 +82,17 @@ class SeaZone:
             self.__bordering.add(region)
             region.set_onedir_bordering(self)
 
+    def get_bordering(self):
+        return self.__bordering
+
     def get_bordering_codes(self):
-        return {region.get_code() for region in self.__bordering}
+        return {region.get_code() for region in self.get_bordering()}
 
     def get_bordering_names(self):
-        return {region.get_name() for region in self.__bordering}
+        return {region.get_name() for region in self.get_bordering()}
 
     def borders(self, other):
-        if other in self.__bordering:
+        if other in self.get_bordering():
             return True
         else:
             return False
@@ -98,6 +101,7 @@ class SeaZone:
 class Country:
     def __init__(self, name, balance=None, government=""):
         self.__name = name
+        self.__official_name = ""
         self.__provinces = set()
         self.__cores = set()
         self.__balance = balance
@@ -106,17 +110,30 @@ class Country:
     def get_name(self):
         return self.__name
 
+    def set_official_name(self, name):
+        self.__official_name = name
+
+    def get_official_name(self):
+        return self.__official_name
+
+    def get_provinces(self):
+        return self.__provinces
+
     def get_provinces_codes(self):
-        return {prov.get_code() for prov in self.__provinces}
+        return {prov.get_code() for prov in self.get_provinces()}
 
     def get_provinces_names(self):
-        return {prov.get_name() for prov in self.__provinces}
+        return {prov.get_name() for prov in self.get_provinces()}
+
+
+    def get_cores(self):
+        return self.__cores
 
     def get_cores_codes(self):
-        return {prov.get_code() for prov in self.__cores}
+        return {prov.get_code() for prov in self.get_cores()}
 
     def get_cores_names(self):
-        return {prov.get_name() for prov in self.__cores}
+        return {prov.get_name() for prov in self.get_cores()}
 
     def get_balance(self):
         return self.__balance
@@ -147,9 +164,39 @@ class Country:
             return province.get_buildings()
 
     def borders(self, other):
-        # to be implemented
-        # for loop
-        pass
+        for own_prov in self.get_provinces():
+            for oth_prov in other.get_provinces():
+                if own_prov.borders(oth_prov):
+                    return True
+        return False
+
+    def get_border_with(self, other):
+        result = set()
+        for own_prov in self.get_provinces():
+            for oth_prov in other.get_provinces():
+                if own_prov.borders(oth_prov):
+                    result.add((own_prov, oth_prov))
+        return result
+
+    def get_border_with_names(self, other):
+        result = set()
+        coll = self.get_border_with(other)
+        while coll:
+            current = coll.pop()
+            result.add((current[0].get_name(), current[1].get_name()))
+        return result
+
+    def get_border_with_codes(self, other):
+        result = set()
+        coll = self.get_border_with(other)
+        while coll:
+            current = coll.pop()
+            result.add((current[0].get_code(), current[1].get_code()))
+        return result
+
+
+
+
 
 
 
