@@ -1,4 +1,6 @@
-from states import Province, Country
+from states import Province, Country, SeaZone
+
+#               PROVINCES & COUNTRIES INITIALISATION
 
 # BRITISH COLUMBIA
 anc = Province('anc', 'Anchorage', True)
@@ -193,3 +195,274 @@ nic = Province('nic', 'Nicaragua', True)
 pan = Province('pan', 'Panama', True)
 ven = Province('ven', 'Venezuela', True)
 
+#               SEAZONES INITIALISATION
+
+# ARCTIC
+ARO = SeaZone('ARO', 'Arctic Ocean')
+BAB = SeaZone('BAB', 'Baffin Bay')
+BEF = SeaZone('BEF', 'Beaufort Sea')
+BER = SeaZone('BER', 'Bering Sea')
+GSL = SeaZone('GSL', 'Gulf of St-Lawrence')
+HUB = SeaZone('HUB', 'Hudson Bay')
+NAO = SeaZone('NAO', 'North Atlantic Ocean')
+SOL = SeaZone('SOL', 'Sea of Labrador')
+
+# MID ATLANTIC
+APB = SeaZone('APB', 'Apalachee Bay')
+BET = SeaZone('BET', 'Bermuda Triangle')
+CHB = SeaZone('CHB', 'Chesapeake Bay')
+ECO = SeaZone('ECO', 'East Coast')
+MAB = SeaZone('MAB', 'Massachusetts Bay')
+MAO = SeaZone('MAO', 'Mid Atlantic Ocean')
+MAY = SeaZone('MAY', 'Cape May')
+SOF = SeaZone('SOF', 'Sea of Florida')
+SOS = SeaZone('SOS', 'Sea of Sargasso')
+
+# SOUTH ATLANTIC
+CAT = SeaZone('CAT', 'Cayman Trench')
+ECS = SeaZone('ECS', 'East Caribbean')
+GMO = SeaZone('GMO', 'Gulf of Mosquitos')
+GOC = SeaZone('GOC', 'Gulf of Campeche')
+GOH = SeaZone('GOH', 'Gulf of Hond')
+GOM = SeaZone('GOM', 'Gulf of Mexico')
+LES = SeaZone('LES', 'Lesser Antilles')
+SCS = SeaZone('SCS', 'South Caribbean')
+SOY = SeaZone('SOY', 'Straits of Yucatan')
+WCS = SeaZone('WCS', 'West Caribbean')
+
+# GREAT LAKES
+LER = SeaZone('LER', 'Lake Erie')
+LHU = SeaZone('LHU', 'Lake Huron')
+LMI = SeaZone('LMI', 'Lake Michigan')
+LON = SeaZone('LON', 'Lake Ontario')
+LSU = SeaZone('LSU', 'Lake Superior')
+
+
+# NORTH PACIFIC
+GCA = SeaZone('GCA', 'Gulf of California')
+GOA = SeaZone('GOA', 'Gulf of Alaska')
+GSC = SeaZone('GSC', 'Gulf of Santa Catalina')
+MPO = SeaZone('MPO', 'Mid Pacific Ocean')
+NPO = SeaZone('NPO', 'North Pacific Ocean')
+QCS = SeaZone('QCS', 'Queen Charlotte Sound')
+SJF = SeaZone('SJF', 'Straits of Juan da Fuca')
+WCO = SeaZone('WCO', 'West Coast')
+
+# SOUTH PACIFIC
+COB = SeaZone('COB', 'Coronado Bay')
+COM = SeaZone('COM', 'Coast of Mexico')
+GAL = SeaZone('GAL', 'Galapagos')
+GOF = SeaZone('GOF', 'Gulf of Fonesca')
+GOG = SeaZone('GOG', 'Gulf of Guayaquil')
+GOP = SeaZone('GOP', 'Gulf of Panama')
+GOT = SeaZone('GSC', 'Gulf of Tehuantepec')
+SPO = SeaZone('SPO', 'South Pacific Ocean')
+SWP = SeaZone('SWP', 'South West Pacific Ocean')
+
+#               PROVINCES BORDERING
+
+# BRITISH COLUMBIA
+anc.set_bordering({ARO,BEF,BER,GOA,nbc,QCS,van,yuk})
+cgy.set_bordering({mta,nbc,nwt,sas,van})
+nbc.set_bordering({anc,cgy,nwt,van,yuk})
+van.set_bordering({anc,cgy,ida,mta,nbc,QCS,SJF,was})
+yuk.set_bordering({anc,BEF,nbc,nwt})
+
+# QUEBEC
+abi.set_bordering({HUB,mon,non,que,ung})
+bea.set_bordering({gas,mai,mon,nys,ont,que,vem})
+cot.set_bordering({GSL,lab,que,ung})
+gas.set_bordering({bea,GSL,mai,nbr,que})
+mon.set_bordering({abi,bea,non,ont,que})
+que.set_bordering({abi,bea,cot,gas,GSL,mon,ung})
+ung.set_bordering({abi,cot,HUB,lab,nun,que,SOL})
+
+# REST OF CANADA + GREENLAND
+gre.set_bordering({ARO,BAB,NAO,SOL})
+lab.set_bordering({cot,GSL,SOL,ung})
+man.set_bordering({dak,HUB,min,non,nun,sas,won})
+nbr.set_bordering({gas,GSL,MAB,mai,nsc})
+nfl.set_bordering({GSL,NAO,SOL})
+non.set_bordering({abi,HUB,man,mon,ont,won})
+nsc.set_bordering({GSL,MAB,NAO,nbr})
+nun.set_bordering({BAB,BEF,HUB,man,nwt,sas,SOL,ung})
+nwt.set_bordering({BEF,cgy,nbc,nun,sas,yuk})
+ont.set_bordering({bea,LER,LHU,LON,LSU,mic,mon,non,nys,upe,won})
+sas.set_bordering({cgy,dak,man,mta,nun,nwt})
+won.set_bordering({LSU,man,min,non,ont})
+
+# CALIFORNIA
+los.set_bordering({GSC,nev,sdi,sfi,WCO})
+sdi.set_bordering({ari,baj,GSC,los,nev})
+sfi.set_bordering({los,nev,ore,WCO})
+
+# TEXAS
+dal.set_bordering({ark,hou,lou,nme,okl,san,wte})
+hou.set_bordering({dal,GOM,lou,san})
+san.set_bordering({coa,dal,GOM,hou,nle,wte})
+wte.set_bordering({chh,coa,dal,nme,san})
+
+# STATES WEST OF MISSISSIPPI
+ark.set_bordering({dal,dso,kan,lou,mis,okl,ten})
+ari.set_bordering({baj,chh,col,nev,nme,sdi,uta})
+col.set_bordering({ari,kan,neb,nme,okl,uta,wyo})
+dak.set_bordering({iow,man,min,mta,neb,sas,wyo})
+haw.set_bordering({MPO,NPO,SPO,SWP})
+ida.set_bordering({mta,nev,ore,uta,van,was,wyo})
+kan.set_bordering({col,mis,neb,okl})
+lou.set_bordering({APB,ark,dal,dso,GOM,hou})
+mis.set_bordering({ark,chi,iow,kan,ken,neb,okl,ten})
+mta.set_bordering({cgy,dak,ida,sas,van,wyo})
+neb.set_bordering({col,dak,iow,kan,mis,wyo})
+nev.set_bordering({ari,ida,los,ore,sdi,sfi,uta})
+nme.set_bordering({ari,chh,col,dal,okl,wte})
+okl.set_bordering({ark,col,dal,kan,mis,nme})
+ore.set_bordering({ida,nev,sfi,SJF,was,WCO})
+uta.set_bordering({ari,col,ida,nev,wyo})
+was.set_bordering({ida,ore,SJF,van})
+wyo.set_bordering({col,dak,ida,mta,neb,uta})
+
+# CHICAGO
+chi.set_bordering({ind,iow,ken,LMI,mil,mis})
+ind.set_bordering({chi,ken,LMI,mic,ohi})
+iow.set_bordering({chi,dak,mil,min,mis,neb})
+mil.set_bordering({chi,iow,LMI,LSU,min,upe})
+min.set_bordering({dak,iow,LSU,man,mil,won})
+
+# FLORIDA
+fpa.set_bordering({APB,dso,geo,jac,tam})
+jac.set_bordering({ECO,fpa,geo,mia,tam})
+mia.set_bordering({APB,ECO,jac,SOF,tam})
+tam.set_bordering({APB,fpa,jac,mia})
+
+# NEW YORK
+nje.set_bordering({MAY,nyc,phi,wdc})
+nyc.set_bordering({mas,MAY,nje,nys,phi})
+nys.set_bordering({bea,LER,LON,mas,nyc,ont,phi,vem,wpe})
+phi.set_bordering({nje,nyc,nys,wdc,wpe})
+wpe.set_bordering({LER,nys,ohi,phi,wdc,wvi})
+
+# STATES EAST OF MISSISSIPPI
+dso.set_bordering({APB,ark,fpa,geo,lou,ten})
+geo.set_bordering({dso,ECO,fpa,jac,nca,sca,ten})
+ken.set_bordering({chi,ind,mis,ohi,ten,vir,wvi})
+mai.set_bordering({bea,gas,MAB,nbr,vem})
+mas.set_bordering({MAB,MAY,nyc,nys,vem})
+mic.set_bordering({ind,LER,LHU,LMI,ohi,ont,upe})
+nca.set_bordering({CHB,ECO,geo,sca,ten,vir})
+ohi.set_bordering({ind,ken,LER,mic,wpe,wvi})
+sca.set_bordering({ECO,geo,nca})
+ten.set_bordering({ark,dso,geo,ken,mis,nca,vir})
+upe.set_bordering({LHU,LMI,LSU,mic,mil,ont})
+vem.set_bordering({bea,MAB,mai,mas,nys})
+vir.set_bordering({CHB,ken,nca,ten,wdc,wvi})
+wdc.set_bordering({CHB,MAY,nje,phi,vir,wpe,wvi})
+wvi.set_bordering({ken,ohi,vir,wdc,wpe})
+
+# MEXICO
+gua.set_bordering({COM,dur,GCA,gue,mex,pot})
+gue.set_bordering({COM,gua,mex,oax})
+mex.set_bordering({gua,gue,oax,pot,ver})
+oax.set_bordering({chp,COM,GOT,gue,mex,ver})
+pot.set_bordering({coa,dur,GOC,gua,mex,nle,ver})
+ver.set_bordering({chp,GOC,mex,oax,pot,tab})
+
+# REST OF MEXICO
+baj.set_bordering({ari,chh,GCA,GSC,MPO,NPO,sdi})
+chh.set_bordering({ari,baj,coa,dur,GCA,nme,wte})
+chp.set_bordering({GOT,gut,oax,tab,ver})
+coa.set_bordering({chh,dur,nle,pot,san,wte})
+dur.set_bordering({chh,coa,GCA,gua,pot})
+nle.set_bordering({coa,GOC,GOM,pot,san})
+tab.set_bordering({chp,GOC,gut,ver,yuc})
+yuc.set_bordering({GOC,GOH,GOM,gut,SOY,tab})
+
+# CUBA
+cam.set_bordering({BET,CAT,hav,hol,SOF,WCS})
+hav.set_bordering({cam,SOF,SOY,WCS})
+hol.set_bordering({BET,cam,CAT})
+kin.set_bordering({CAT,ECS,WCS})
+
+# PERU
+ant.set_bordering({bog,cal,guj,SCS,vic})
+bog.set_bordering({ant,cal,ecu,lim,vic})
+cal.set_bordering({ant,bog,ecu,GOG,GOP,pan,SCS})
+ecu.set_bordering({bog,cal,GAL,GOG,lim})
+guj.set_bordering({ant,SCS,ven,vic})
+lim.set_bordering({bog,ecu,GAL,GOG})
+vic.set_bordering({ant,bog,guj,ven})
+
+# REST OF AMERICAS
+cri.set_bordering({COB,GMO,nic,pan})
+dom.set_bordering({BET,ECS,hai,LES,SOS})
+els.set_bordering({COM,GOF,gut,hon})
+gut.set_bordering({chp,COM,els,GOH,GOT,hon,tab,yuc})
+hai.set_bordering({BET,CAT,dom,ECS})
+hon.set_bordering({els,GOF,GOH,gut,nic,WCS})
+nic.set_bordering({COB,cri,GMO,GOF,hon,WCS})
+pan.set_bordering({cal,COB,cri,GMO,GOP,SCS})
+ven.set_bordering({ECS,guj,LES,SCS,vic})
+
+#               SEAZONES BORDERING
+
+# ARCTIC
+ARO.set_bordering({anc,BAB,BEF,BER,nun})
+BAB.set_bordering({ARO,gre,nun,SOL})
+BEF.set_bordering({anc,ARO,nun,nwt,yuk})
+BER.set_bordering({anc,ARO,GOA})
+GSL.set_bordering({cot,gas,lab,NAO,nbr,nfl,nsc,que,SOL})
+HUB.set_bordering({abi,man,non,nun,SOL,ung})
+NAO.set_bordering({gre,GSL,MAB,MAO,nfl,nsc,SOL})
+SOL.set_bordering({BAB,gre,GSL,HUB,lab,NAO,nfl,nun,ung})
+
+# MID ATLANTIC
+APB.set_bordering({dso,fpa,GOM,lou,mia,SOF,tam})
+BET.set_bordering({cam,CAT,dom,ECO,hai,hol,MAY,MAO,SOF,SOS})
+CHB.set_bordering({ECO,MAY,nca,vir,wdc})
+ECO.set_bordering({BET,CHB,geo,jac,MAY,mia,nca,sca,SOF})
+MAB.set_bordering({mai,MAO,mas,MAY,NAO,nbr,nsc,vem})
+MAO.set_bordering({BET,MAB,MAY,NAO,SOS})
+MAY.set_bordering({BET,CHB,ECO,MAB,MAO,mas,nje,nyc,wdc})
+SOF.set_bordering({APB,BET,cam,ECO,GOM,hav,mia,SOY})
+SOS.set_bordering({BET,dom,LES,MAO})
+
+# SOUTH ATLANTIC
+CAT.set_bordering({BET,cam,ECS,hai,hol,kin,WCS})
+ECS.set_bordering({CAT,dom,hai,kin,LES,SCS,ven,WCS})
+GMO.set_bordering({cri,nic,pan,SCS,WCS})
+GOC.set_bordering({GOM,nle,pot,tab,ver,yuc})
+GOH.set_bordering({gut,hon,SOY,WCS,yuc})
+GOM.set_bordering({APB,GOC,hou,lou,nle,san,SOF,SOY,yuc})
+LES.set_bordering({dom,ECS,SOS,ven})
+SCS.set_bordering({ant,cal,ECS,GMO,guj,pan,ven,WCS})
+SOY.set_bordering({GOH,GOM,hav,SOF,WCS,yuc})
+WCS.set_bordering({cam,CAT,ECS,GMO,GOH,hav,hon,kin,nic,SCS,SOY})
+
+# GREAT LAKES
+LER.set_bordering({}) # not yet implemented
+LHU.set_bordering({}) # not yet implemented
+LMI.set_bordering({chi,ind,LHU,mic,mil,upe})
+LON.set_bordering({}) # not yet implemented
+LSU.set_bordering({mil,min,ont,upe,won})
+
+
+# NORTH PACIFIC
+GCA.set_bordering({baj,chh,COM,dur,gua,MPO})
+GOA.set_bordering({anc,BER,NPO,QCS,SJF,WCO})
+GSC.set_bordering({baj,los,NPO,sdi,WCO})
+MPO.set_bordering({baj,COM,GCA,haw,NPO,SPO})
+NPO.set_bordering({baj,GOA,GSC,haw,MPO,SWP,WCO})
+QCS.set_bordering({anc,GOA,SJF,van})
+SJF.set_bordering({GOA,ore,QCS,van,was,WCO})
+WCO.set_bordering({GOA,GSC,los,NPO,ore,sfi,SJF})
+
+# SOUTH PACIFIC
+COB.set_bordering({cri,GOF,GOG,GOP,nic,pan})
+COM.set_bordering({els,GAL,GCA,GOF,GOT,gua,gue,gut,MPO,oax,SPO})
+GAL.set_bordering({COM,GOF,GOG,lim,SPO})
+GOF.set_bordering({COB,COM,els,GAL,GOG,hon,nic})
+GOG.set_bordering({cal,COB,ecu,GAL,GOF,GOP,lim})
+GOP.set_bordering({cal,COB,GOG,pan})
+GOT.set_bordering({chp,COM,gut,oax})
+SPO.set_bordering({COM,GAL,haw,MPO,SWP})
+SWP.set_bordering({haw,NPO,SPO})
