@@ -99,7 +99,7 @@ class SeaZone:
 
 
 class Country:
-    def __init__(self, name, conj, balance=None, government=""):
+    def __init__(self, name, conj, balance=0, government=""):
         self.__name = name
         self.__official_name = ""
         self.__provinces = set()
@@ -218,9 +218,8 @@ class Country:
     def get_capital(self):
         return self.__capital
 
-    def set_capital(self, province):
-        if province in self.get_provinces():
-            self.__capital = province
+    def set_capital(self, city):
+        self.__capital = city
 
 
 class Person:

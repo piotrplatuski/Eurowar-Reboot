@@ -65,26 +65,26 @@ event2_10 = Event("A small <countrian1> airplane has crashed while crossing <cou
                       " passengers were unfortunately all killed on the spot.", 2)
 
 # ______________________________________________________________________________________________________________________
-events1 = (event1_1, event1_2, event1_3, event1_4, event1_5, event1_6, event1_7, event1_8, event1_9, event1_10,
-           event1_11, event1_12, event1_13, event1_14, event1_15, event1_16, event1_17, event1_18, event1_19, event1_20,
-           )
-events2 = (event2_1, event2_2, event2_3, event2_4, event2_5, event2_6, event2_7, event2_8, event2_9, event2_10,)
-
-events1_prob = [event['prob'] for event in events1]
-events2_prob = [event['prob'] for event in events2]
-
-all_events = [events1, events2]
-all_probs = [events1_prob, events2_prob]
-
-
-def normalize_probs(target):
-    """Multiplies probabilities to make the sum of the list equal to 1."""
-    for lis in target:
-        tot = sum(lis)
-        if tot != 1:
-            for number in range(len(lis)):
-                lis[number] *= 1 / tot
-    return target
-
-
-normalize_probs(all_probs)
+# events1 = (event1_1, event1_2, event1_3, event1_4, event1_5, event1_6, event1_7, event1_8, event1_9, event1_10,
+#            event1_11, event1_12, event1_13, event1_14, event1_15, event1_16, event1_17, event1_18, event1_19, event1_20,
+#            )
+# events2 = (event2_1, event2_2, event2_3, event2_4, event2_5, event2_6, event2_7, event2_8, event2_9, event2_10,)
+#
+# events1_prob = [event['prob'] for event in events1]
+# events2_prob = [event['prob'] for event in events2]
+#
+# all_events = [events1, events2]
+# all_probs = [events1_prob, events2_prob]
+#
+#
+# def normalize_probs(target):
+#     """Multiplies probabilities to make the sum of the list equal to 1."""
+#     for lis in target:
+#         tot = sum(lis)
+#         if tot != 1:
+#             for number in range(len(lis)):
+#                 lis[number] *= 1 / tot
+#     return target
+#
+#
+# normalize_probs(all_probs)

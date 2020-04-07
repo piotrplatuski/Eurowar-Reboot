@@ -9,7 +9,7 @@ nbc = Province('nbc', 'Northern British-Columbia', False)
 van = Province('van', 'Vancouver', True)
 yuk = Province('yuk', 'Yukon', False)
 
-british_columbia = Country('British Columbia', 0, 'republic')
+british_columbia = Country('British Columbia', 'British Columbian', 0, 'republic')
 bc_start_provs = {anc, cgy, nbc, van, yuk}
 british_columbia.add_cores(bc_start_provs)
 british_columbia.add_provinces(bc_start_provs)
@@ -23,7 +23,7 @@ mon = Province('mon', 'Montreal', True)
 que = Province('que', 'Quebec', True)
 ung = Province('ung', 'Ungava', True)
 
-quebec = Country('Quebec', 0, 'republic')
+quebec = Country('Quebec', 'Quebec', 0, 'republic')
 que_start_provs = {abi, bea, cot, gas, mon, que, ung}
 quebec.add_cores(que_start_provs)
 quebec.add_provinces(que_start_provs)
@@ -47,7 +47,7 @@ los = Province('los', 'Los Angeles', True)
 sdi = Province('sdi', 'San Diego', True)
 sfi = Province('sfi', 'San Francisco', True)
 
-california = Country('California', 0, 'republic')
+california = Country('California', 'Californian', 0, 'republic')
 cal_start_provs = {los, sdi, sfi}
 california.add_cores(cal_start_provs)
 california.add_provinces(cal_start_provs)
@@ -59,7 +59,7 @@ hou = Province('hou', 'Houston', True)
 san = Province('san', 'San Antonio', True)
 wte = Province('wte', 'West Texas', False)
 
-texas = Country('Texas', 0, 'republic')
+texas = Country('Texas', 'Texan', 0, 'republic')
 tex_start_provs = {dal, hou, san, wte}
 texas.add_cores(tex_start_provs)
 texas.add_provinces(tex_start_provs)
@@ -102,7 +102,7 @@ jac = Province('jac', 'Jacksonville', True)
 mia = Province('mia', 'Miami', True)
 tam = Province('tam', 'Tampa', True)
 
-florida = Country('Florida', 0, 'republic')
+florida = Country('Florida', 'Floridian', 0, 'republic')
 flo_start_provs = {fpa, jac, mia, tam}
 florida.add_cores(flo_start_provs)
 florida.add_provinces(flo_start_provs)
@@ -114,7 +114,7 @@ nys = Province('nys', 'New York State', False)
 phi = Province('phi', 'Philadelphia', True)
 wpe = Province('wpe', 'West Pennsylvania', False)
 
-new_york = Country('New York', 0, 'republic')
+new_york = Country('New York', 'New Yorker', 0, 'republic')
 ny_start_provs = {nje, nyc, nys, phi, wpe}
 new_york.add_cores(ny_start_provs)
 new_york.add_provinces(ny_start_provs)
@@ -144,7 +144,7 @@ oax = Province('oax', 'Oaxaca', False)
 pot = Province('pot', 'Potosi', False)
 ver = Province('ver', 'Veracruz', True)
 
-mexico = Country('Mexico', 0, 'republic')
+mexico = Country('Mexico', 'Mexican', 0, 'republic')
 mex_start_provs = {gua, gue, mex, oax, pot, ver}
 mexico.add_cores(mex_start_provs)
 mexico.add_provinces(mex_start_provs)
@@ -165,7 +165,7 @@ hav = Province('hav', 'Havana', True)
 hol = Province('hol', 'Holguin', True)
 kin = Province('kin', 'Kingston', True)
 
-cuba = Country('Cuba', 0, 'republic')
+cuba = Country('Cuba', 'Cuban', 0, 'republic')
 cub_start_provs = {cam, hav, hol, kin}
 cuba.add_cores(cub_start_provs)
 cuba.add_provinces(cub_start_provs)
@@ -179,7 +179,7 @@ guj = Province('guj', 'Guajira', False)
 lim = Province('lim', 'Lima', True)
 vic = Province('vic', 'Vichada', False)
 
-peru = Country('Peru', 0, 'republic')
+peru = Country('Peru', 'Peruvian', 0, 'republic')
 per_start_provs = {ant, bog, cal, ecu, guj, lim, vic}
 peru.add_cores(per_start_provs)
 peru.add_provinces(per_start_provs)

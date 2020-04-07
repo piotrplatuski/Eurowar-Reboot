@@ -1,5 +1,12 @@
 from american_map import *
 from states import *
+from events import *
+from event_texts import *
+
+mexico.set_languages({'es-mx'})
+some_guy = Person('Pedro', 'Martinez')
+mexico.set_ruler(some_guy)
+mexico.set_capital('Mexico City')
 
 mexico.change_balance(4000)
 assert mexico.get_balance() == 4000
@@ -35,3 +42,7 @@ print(heartland.get_border_with(quebec))
 print(new_york.get_border_with_names(quebec))
 print(heartland.get_border_with_codes(quebec))
 print(new_york.get_border_with_codes(quebec))
+
+print(event1_1.fill_in_text({mexico}))
+print(event1_3.fill_in_text({mexico}))
+print(event1_8.fill_in_text({mexico}))
