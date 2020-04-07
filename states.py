@@ -99,13 +99,17 @@ class SeaZone:
 
 
 class Country:
-    def __init__(self, name, balance=None, government=""):
+    def __init__(self, name, conj, balance=None, government=""):
         self.__name = name
         self.__official_name = ""
         self.__provinces = set()
         self.__cores = set()
         self.__balance = balance
         self.__government = government
+        self.__languages = set()
+        self.__conj = conj
+        self.__ruler = None
+        self.__capital = None
 
     def get_name(self):
         return self.__name
@@ -124,7 +128,6 @@ class Country:
 
     def get_provinces_names(self):
         return {prov.get_name() for prov in self.get_provinces()}
-
 
     def get_cores(self):
         return self.__cores
@@ -193,6 +196,69 @@ class Country:
             current = coll.pop()
             result.add((current[0].get_code(), current[1].get_code()))
         return result
+
+    def get_languages(self):
+        return self.__languages
+
+    def set_languages(self, languages):
+        self.__languages = languages
+
+    def get_conj(self):
+        return self.__conj
+
+    def set_conj(self, conj):
+        self.__conj = conj
+
+    def get_ruler(self):
+        return self.__ruler
+
+    def set_ruler(self, ruler):
+        self.__ruler = ruler
+
+    def get_capital(self):
+        return self.__capital
+
+    def set_capital(self, province):
+        if province in self.get_provinces():
+            self.__capital = province
+
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__nickname = None
+        self.__birthyear = None
+
+    def full_name(self):
+        if self.get_nickname() is None:
+            return self.__first_name + " " + self.__last_name
+        else:
+            return self.__first_name + " '" + self.__nickname + "' "  + self.__last_name
+
+    def get_first_name(self):
+        return self.__first_name
+
+    def set_first_name(self, name):
+        self.__first_name = name
+
+    def get_last_name(self):
+        return self.__last_name
+
+    def set_last_name(self, name):
+        self.__last_name = name
+
+    def get_nickname(self):
+        return self.__nickname
+
+    def set_nickname(self, name):
+        self.__nickname = name
+
+    def get_birthyear(self):
+        return self.__birthyear
+
+    def set_birthyear(self, year):
+        self.__birthyear = year
 
 
 
