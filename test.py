@@ -3,6 +3,8 @@ from states import *
 from events import *
 from event_texts import *
 
+print(mexico.missing_attributes())
+
 mexico.set_languages({'es-mx'})
 some_guy = Person('Pedro', 'Martinez')
 mexico.set_ruler(some_guy)
@@ -20,6 +22,7 @@ print(mexico.get_cores_codes())
 mexico.set_government('dictatorship')
 assert mexico.get_government() == 'dictatorship'
 assert mexico.get_name() == 'Mexico'
+mexico.set_ruler_type('Führerez')
 
 mex.set_bordering({ver, oax, gue, gua, pot})
 print(pot.get_bordering_names())
@@ -43,6 +46,7 @@ print(new_york.get_border_with_names(quebec))
 print(heartland.get_border_with_codes(quebec))
 print(new_york.get_border_with_codes(quebec))
 
-print(event1_1.fill_in_text({mexico}))
-print(event1_3.fill_in_text({mexico}))
-print(event1_8.fill_in_text({mexico}))
+print(ev1_1.fill_in_text({mexico}))
+print(ev1_3.fill_in_text({mexico}))
+print(ev1_8.fill_in_text({mexico}))
+print(ev1_2.fill_in_text({mexico}))

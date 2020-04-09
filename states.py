@@ -110,6 +110,7 @@ class Country:
         self.__conj = conj
         self.__ruler = None
         self.__capital = None
+        self.__ruler_type = 'Ruler'
 
     def get_name(self):
         return self.__name
@@ -220,6 +221,39 @@ class Country:
 
     def set_capital(self, city):
         self.__capital = city
+
+    def get_ruler_type(self):
+        return self.__ruler_type
+
+    def set_ruler_type(self, title):
+        self.__ruler_type = title
+
+    def missing_attributes(self):
+        result = []
+        extra = ''
+        if self.get_provinces() == set():
+            result.append('Provinces')
+        if self.get_cores() == set():
+            result.append('Cores')
+        if self.get_official_name() == '':
+            result.append('Official name')
+        if self.get_languages() == set():
+            result.append('Languages')
+        if self.get_ruler() == None:
+            result.append('Ruler')
+        if self.get_capital() == '':
+            result.append('Capital')
+        if self.get_ruler_type() == '':
+            result.append('Ruler type')
+        if self.get_ruler_type() == 'Ruler':
+            extra = 'The current ruler type is Ruler. It will work, but you might want to change it for immersion.'
+
+        return 'There are ' + str(len(result)) + ' missing attributes: ' + str(result) + '. ' + extra
+
+
+
+
+
 
 
 class Person:

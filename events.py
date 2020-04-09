@@ -49,6 +49,7 @@ class Event:
             text = str.replace(text, '<countrian1>', countries[0].get_conj())
             text = str.replace(text, '<ruler1>', countries[0].get_ruler().full_name())
             text = str.replace(text, '<cap1>', countries[0].get_capital())
+            text = str.replace(text, '<rulertype1>', countries[0].get_ruler_type())
 
         if self.get_amount_countries() == 2:
             person1 = MimPerson(countries[1].get_languages().pop())
@@ -59,6 +60,7 @@ class Event:
             text = str.replace(text, '<countrian2>', countries[1].get_conj())
             text = str.replace(text, '<ruler2>', countries[1].get_ruler().full_name())
             text = str.replace(text, '<cap2>', countries[1].get_capital())
+            text = str.replace(text, '<rulertype2>', countries[1].get_ruler_type())
         return text
 
     def get_effects(self):
