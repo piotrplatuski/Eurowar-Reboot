@@ -33,7 +33,7 @@ assert ver.borders(mex) is True
 
 print(chi.get_bordering_names())
 assert new_york.borders(quebec) is True
-assert heartland.borders(new_york) is False
+assert chicago.borders(new_york) is False
 assert florida.borders(cuba) is False
 
 quebec.add_provinces({vem})
@@ -41,21 +41,21 @@ new_york.add_provinces({mas})
 assert vem.borders(mas) is True
 
 print('________')
-print(heartland.get_border_with(quebec))
+print(chicago.get_border_with(quebec))
 print(new_york.get_border_with_names(quebec))
-print(heartland.get_border_with_codes(quebec))
+print(chicago.get_border_with_codes(quebec))
 print(new_york.get_border_with_codes(quebec))
 
 print(ev1_1.fill_in_text({mexico}))
 print(ev1_3.fill_in_text({mexico}))
 print(ev1_8.fill_in_text({mexico}))
 print(ev1_2.fill_in_text({mexico}))
-print(mexico.get_random_supply_center().get_name())
-print(mexico.get_random_supply_center().get_name())
-print(mexico.get_random_supply_center().get_name())
-print(mexico.get_random_province().get_name())
-print(mexico.get_random_province().get_name())
-print(mexico.get_random_province().get_name())
-print(mexico.get_random_non_supply_center().get_name())
-print(mexico.get_random_non_supply_center().get_name())
-print(mexico.get_random_non_supply_center().get_name())
+print(mexico.random_supply_center().get_name())
+print(mexico.random_supply_center().get_name())
+print(mexico.random_supply_center().get_name())
+print(mexico.random_province().get_name())
+print(mexico.random_province().get_name())
+print(mexico.random_province().get_name())
+print(mexico.random_non_supply_center().get_name())
+print(mexico.random_non_supply_center().get_name())
+print(mexico.random_non_supply_center().get_name())

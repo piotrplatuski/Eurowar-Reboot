@@ -105,5 +105,7 @@ ev_mon_pos1 = Event("<ruler1> is well-beloved monarch in <country1>. Under His r
 
 ## +1 stability, +some economy points (amount could be RNG)
 
-all = [ev1_1, ev1_2, ev1_3, ev1_4]
+all = [ev1_1, ev1_2, ev1_3, ev1_4, ev1_5_1, ev1_5_2, ev1_5_3, ev1_6, ev1_7, ev1_8, ev1_9]
+for event in all:
+    event.set_probability(1)
 all_probs = [event.get_probability() for event in all]

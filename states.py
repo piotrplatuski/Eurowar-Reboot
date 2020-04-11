@@ -250,14 +250,20 @@ class Country:
 
         return 'There are ' + str(len(result)) + ' missing attributes: ' + str(result) + '. ' + extra
 
-    def get_random_province(self):
+    def supply_centers(self):
+        return {prov for prov in self.get_provinces() if prov.has_supply_center() is True}
+
+    def non_supply_centers(self):
+        return {prov for prov in self.get_provinces() if prov.has_supply_center() is False}
+
+    def random_province(self):
         return random.choice(list(self.get_provinces()))
 
-    def get_random_supply_center(self):
-        return random.choice([prov for prov in self.get_provinces() if prov.has_supply_center() is True])
+    def random_supply_center(self):
+        return random.choice(list(self.supply_centers()))
 
-    def get_random_non_supply_center(self):
-        return random.choice([prov for prov in self.get_provinces() if prov.has_supply_center() is False])
+    def random_non_supply_center(self):
+        return random.choice(list(self.non_supply_centers()))
 
 class Person:
     def __init__(self, first_name, last_name):

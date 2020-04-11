@@ -1,4 +1,4 @@
-from states import Province, Country, SeaZone
+from states import Province, Country, SeaZone, Person
 
 #               PROVINCES & COUNTRIES INITIALISATION
 
@@ -91,10 +91,10 @@ iow = Province('iow', 'Iowa', False)
 mil = Province('mil', 'Milwaukee', True)
 min = Province('min', 'Minneapolis', True)
 
-heartland = Country('Heartland', 0, 'republic')
+chicago = Country('Chicago', 'Chicagoan', 0, 'republic')
 chi_start_provs = {chi, ind, iow, mil, min}
-heartland.add_cores(chi_start_provs)
-heartland.add_provinces(chi_start_provs)
+chicago.add_cores(chi_start_provs)
+chicago.add_provinces(chi_start_provs)
 
 # FLORIDA
 fpa = Province('fpa', 'Florida Panhandle', False)
@@ -467,4 +467,17 @@ GOT.set_bordering({chp,COM,gut,oax})
 SPO.set_bordering({COM,GAL,haw,MPO,SWP})
 SWP.set_bordering({haw,NPO,SPO})
 
-all_countries = {british_columbia, quebec, california, texas, heartland, florida, new_york, mexico, cuba, peru}
+english_speaking = {british_columbia, california, texas, chicago, florida, new_york}
+for country in english_speaking:
+    country.set_languages({'en'})
+mexico.set_languages({'es-mx'})
+quebec.set_languages({'en','fr'})
+cuba.set_languages({'es'})
+peru.set_languages({'es'})
+
+all_countries = {british_columbia, quebec, california, texas, chicago, florida, new_york, mexico, cuba, peru}
+new_man = Person('Johnny', 'Cash')
+for country in all_countries:
+    country.set_ruler(new_man)
+    country.set_capital('some city')
+    country.set_official_name('official name example')
