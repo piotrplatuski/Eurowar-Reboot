@@ -466,3 +466,5 @@ GOP.set_bordering({cal,COB,GOG,pan})
 GOT.set_bordering({chp,COM,gut,oax})
 SPO.set_bordering({COM,GAL,haw,MPO,SWP})
 SWP.set_bordering({haw,NPO,SPO})
+
+all_countries = {british_columbia, quebec, california, texas, heartland, florida, new_york, mexico, cuba, peru}
