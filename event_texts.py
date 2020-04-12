@@ -108,4 +108,6 @@ ev_mon_pos1 = Event("<ruler1> is well-beloved monarch in <country1>. Under His r
 all = [ev1_1, ev1_2, ev1_3, ev1_4, ev1_5_1, ev1_5_2, ev1_5_3, ev1_6, ev1_7, ev1_8, ev1_9]
 for event in all:
     event.set_probability(1)
+    event.set_effects('{country1} economy +400, stability -3, '
+                      '{ruler1} fname Andrzej, lname Poniatowski')
 all_probs = [event.get_probability() for event in all]

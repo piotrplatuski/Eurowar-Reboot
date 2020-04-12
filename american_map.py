@@ -481,3 +481,16 @@ for country in all_countries:
     country.set_ruler(new_man)
     country.set_capital('some city')
     country.set_official_name('official name example')
+
+all_provs = {anc,cgy,nbc,van,yuk,abi,bea,cot,gas,mon,que,ung,gre,lab,man,nbr,nfl,non,nsc,nun,nwt,ont,sas,won,los,
+             sdi,sfi,dal,hou,san,wte,ark,ari,col,dak,haw,ida,kan,lou,mis,mta,neb,nev,nme,okl,ore,uta,was,wyo,chi,
+             ind,iow,mil,min,fpa,jac,mia,tam,nje,nyc,nys,phi,wpe,dso,geo,ken,mai,mas,mic,nca,ohi,sca,ten,upe,vem,
+             vir,wdc,wvi,gua,gue,mex,oax,pot,ver,baj,chh,chp,coa,dur,nle,tab,yuc,cam,hav,hol,kin,ant,bog,cal,ecu,
+             guj,lim,vic,cri,dom,els,gut,hai,hon,nic,pan,ven,ARO,BAB,BEF,BER,GSL,HUB,NAO,SOL,APB,BET,CHB,ECO,MAB,
+             MAO,MAY,SOF,SOS,CAT,ECS,GMO,GOC,GOH,GOM,LES,SCS,SOY,WCS,LER,LHU,LMI,LON,LSU,GCA,GOA,GSC,MPO,NPO,QCS,
+             SJF,WCO,COB,COM,GAL,GOF,GOG,GOP,GOT,SPO,SWP}
+
+land_provs = {prov for prov in all_provs if isinstance(prov, Province)}
+sea_provs = {prov for prov in all_provs if isinstance(prov, SeaZone)}
+neutral_provs = {prov for prov in land_provs if prov.get_owner() is None}
+

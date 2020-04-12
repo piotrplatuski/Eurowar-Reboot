@@ -9,8 +9,8 @@ class Event:
         self.__amount_countries = amount_countries
         self.__probability = probability
         self.__countries = set()
-        self.__conditions = set()
-        self.__effects = set()
+        self.__conditions = ''
+        self.__effects = ''
 
     def get_text(self):
         return self.__text
@@ -108,10 +108,7 @@ class Event:
     def set_effects(self, effects):
         self.__effects = effects
 
-    def fire(self):
-        # to be implemented: this is where the effects of the event take place.
-        if self.__conditions:
-            self.get_effects() # and implement them on the according countries
+
 
 
 

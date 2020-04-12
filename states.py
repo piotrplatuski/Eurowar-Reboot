@@ -1,5 +1,8 @@
-prices = {"railway": 500}
 import random
+
+
+prices = {"railway": 500}
+
 
 class Province:
     def __init__(self, code, name="", supply_center=False):
@@ -99,7 +102,7 @@ class SeaZone:
 
 
 class Country:
-    def __init__(self, name, conj, balance=0, government=""):
+    def __init__(self, name, conj, balance=0, government="", stability=7):
         self.__name = name
         self.__official_name = ""
         self.__provinces = set()
@@ -111,6 +114,7 @@ class Country:
         self.__ruler = None
         self.__capital = None
         self.__ruler_type = 'Ruler'
+        self.__stability = stability
 
     def get_name(self):
         return self.__name
@@ -228,6 +232,12 @@ class Country:
     def set_ruler_type(self, title):
         self.__ruler_type = title
 
+    def get_stability(self):
+        return self.__stability
+
+    def change_stability(self, value):
+        self.__stability += value
+
     def missing_attributes(self):
         result = []
         extra = ''
@@ -264,6 +274,7 @@ class Country:
 
     def random_non_supply_center(self):
         return random.choice(list(self.non_supply_centers()))
+
 
 class Person:
     def __init__(self, first_name, last_name):

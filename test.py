@@ -59,3 +59,14 @@ print(mexico.random_province().get_name())
 print(mexico.random_non_supply_center().get_name())
 print(mexico.random_non_supply_center().get_name())
 print(mexico.random_non_supply_center().get_name())
+some_text = '{country1} economy +400, stability +2, {country2} economy +100, stability -2'
+elements = some_text.split(', ')
+elem_list = []
+for i in range(0, len(elements)):
+    elem_list.append([])
+    elem_list[i] = elements[i].split(' ')
+print(elem_list)
+new_list = flat_list = [item for sublist in elem_list for item in sublist]
+print(new_list)
+print(new_list.index('{country2}'))
+
