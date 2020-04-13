@@ -467,11 +467,12 @@ GOT.set_bordering({chp,COM,gut,oax})
 SPO.set_bordering({COM,GAL,haw,MPO,SWP})
 SWP.set_bordering({haw,NPO,SPO})
 
-english_speaking = {british_columbia, california, texas, chicago, florida, new_york}
+english_speaking = {california, texas, chicago, florida, new_york}
 for country in english_speaking:
     country.set_languages({'en'})
+british_columbia.set_languages({'en-ca', 'en'})
 mexico.set_languages({'es-mx'})
-quebec.set_languages({'en','fr'})
+quebec.set_languages({'en-ca', 'fr'})
 cuba.set_languages({'es'})
 peru.set_languages({'es'})
 

@@ -4,7 +4,7 @@ from mimesis.enums import Gender as MimGender
 
 
 class Event:
-    def __init__(self, text, amount_countries, probability=0):
+    def __init__(self, amount_countries, text, probability=0):
         self.__text = text
         self.__amount_countries = amount_countries
         self.__probability = probability
