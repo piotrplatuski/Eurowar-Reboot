@@ -111,23 +111,22 @@ mon3 = Event(1, "Fascists, led by <name1>, have organized a massive rally from <
 # Choices: Declare a state of siege (can't have any movement to or from capital province, lose all income in capital
 # for this year), Switch to Fascism (king hands power to the fascist leader, however king stays as king).
 
+####################################################################################################
 # VERY POSITIVE EVENTS (8 or more stability, low chance)
-# Later, just add those to fas and mon...
-# Communism
-# Fascism
+com_pos1 = Event(1, "The communism has brought long-sought equality to <countrian1> people. Proletariat is finally united, produce is plentiful... and propaganda is more intricate than ever before."
+                    " Dissidents are effectively suppressed, economy is blooming and"
+                    " people are very supportive of the fascist rule.")
 fas_pos1 = Event(1, "The government in <country1> works like a well-oiled machine."
                     " Dissidents are effectively suppressed, economy is blooming and"
                     " people are very supportive of the fascist rule.")
-"Declare state of siege. "  # If there is no army / navy in capital it has to arrive before year ends for government to
-# stay Monarchy
-"Let them come.-"  # Government changes to fascist
-# Monarchy
-mon_pos1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under His rule both nobles and commoners are"
-                    " content, military is ready to fight for their King, while the Cabinet of Ministers is"
-                    " ready to ensure King's will.")
-# Republic
+mon_pos1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under His rule both nobles and commoners are content, military is ready to fight for their King, while the Cabinet of Ministers is ready to ensure King's will."
+                    " Dissidents are effectively suppressed, economy is blooming and"
+                    " people are very supportive of the fascist rule.")
+#fas_pos1 = Event(1, "The government in <country1> works like a well-oiled machine."
+#                    " Dissidents are effectively suppressed, economy is blooming and"
+#                    " people are very supportive of the fascist rule.")
 
-# +1 stability, +some economy points (amount could be RNG)
+####################################################################################################
 
 all = [one1, one2, one3, one4, one5_1, one5_2, one5_3, one6, one7, one8, one9]
 for event in all:
