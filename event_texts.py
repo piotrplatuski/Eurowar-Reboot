@@ -145,7 +145,7 @@ D_tra2 = Event(1, "Two <countrian1> passenger trains have collided to each other
 D_tra3 = Event(1, "A <countrian1> cargo train has derailed in <supplycenter1>. The crew has died, but the tons of cargo that was lost "
                   "in the derailment will be recovered in next weeks.")
 ####################################################################################################
-## FORTUNES 
+# FORTUNES 
 F_gol1 = Event(1, "<countrian1> cartographers have accidentally found a gold vein in <province1> while marking the area. It looks "
                   "promising to investigate further.")
 
@@ -157,7 +157,10 @@ F_har1 = Event(1, "Last season's exceptionally good harvest has filled the <coun
 F_har2 = Event(1, "Last season's exceptionally good harvest has filled the <countrian1> granaries to the brim. It will provide "
                   "<country1> with opportunities to trade.")
 ####################################################################################################
-## NEUTRALS
+# NEUTRALS
+F_gol1 = Event(0, "Local cartographers have accidentally found a gold vein in <province0> while marking the area. It looks promising "
+                  "to investigate further.")
+
 N_oil1 = Event(0, "A plentiful oil reserve has been found in <province0>. Both the reserve and the province will surely become a "
                   "rewarding target to surrounding countries.")
 # uni stands for "unique", for specific provinces.
