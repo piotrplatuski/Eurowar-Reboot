@@ -133,7 +133,7 @@ D_nrd3 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack. T
 
 D_sto1 = Event(1, "A ferocious storm has left thousands of <countrian1> people without a home. Devastating damage was inflicted by the "
                   "storm.")
-D_sto2 = Event(1, "A moderate storm has left hundreds of <countrian1> people without a home. Serious damage was inflicted by the 
+D_sto2 = Event(1, "A moderate storm has left hundreds of <countrian1> people without a home. Serious damage was inflicted by the "
                   "storm.")		
 D_sto3 = Event(1, "A mild storm has left dozens of <countrian1> people without a home. Sustainable damage was inflicted by the storm.")
 	
