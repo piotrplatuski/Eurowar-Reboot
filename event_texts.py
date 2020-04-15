@@ -112,20 +112,57 @@ mon3 = Event(1, "Fascists, led by <name1>, have organized a massive rally from <
 # for this year), Switch to Fascism (king hands power to the fascist leader, however king stays as king).
 
 ####################################################################################################
-# VERY POSITIVE EVENTS (8 or more stability, low chance)
-com_pos1 = Event(1, "The communism has brought long-sought equality to <countrian1> people. Proletariat is finally united, produce is plentiful... and propaganda is more intricate than ever before."
-                    " Dissidents are effectively suppressed, economy is blooming and"
-                    " people are very supportive of the fascist rule.")
-fas_pos1 = Event(1, "The government in <country1> works like a well-oiled machine."
-                    " Dissidents are effectively suppressed, economy is blooming and"
-                    " people are very supportive of the fascist rule.")
-mon_pos1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under His rule both nobles and commoners are content, military is ready to fight for their King, while the Cabinet of Ministers is ready to ensure King's will."
-                    " Dissidents are effectively suppressed, economy is blooming and"
-                    " people are very supportive of the fascist rule.")
-#fas_pos1 = Event(1, "The government in <country1> works like a well-oiled machine."
-#                    " Dissidents are effectively suppressed, economy is blooming and"
-#                    " people are very supportive of the fascist rule.")
+# VERY POSITIVE EVENTS
+VP_com1 = Event(1, "The communism has brought long-sought equality to <countrian1> people. Proletariat is finally united, produce is "
+                   "plentiful... and propaganda is more intricate than ever before.")
+VP_fas1 = Event(1, "The government in <country1> works like a well-oiled machine. Dissidents are effectively suppressed, economy is "
+                   "blooming and people are very supportive of the fascist rule.")
+VP_mon1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under His rule both nobles and commoners are content, military is "
+                   "ready to fight for their <rulertype1>, while the Cabinet of Ministers is ready to ensure <rulertype1>'s will.")
+VP_rep1 = Event(1, "Citizens of <country1> are proud of their rights granted by amendments in the constitution, while the <countrian1> "
+                   "institutions are an example to the rest of world.")
+####################################################################################################
+# DISASTERS
+D_comet = Event(1, "A comet has been sighted in <country1>. It's an omen!")
 
+D_nrd1 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack and passed away. The nation is celebrating the great "
+                  "news.")
+D_nrd2 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack and passed away. The nation is mourning their late "
+                  "<rulertype1>.")
+D_nrd3 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack. The <rulertype1> is dead, long live the <rulertype1>!")		
+
+D_sto1 = Event(1, "A ferocious storm has left thousands of <countrian1> people without a home. Devastating damage was inflicted by the "
+                  "storm.")
+D_sto2 = Event(1, "A moderate storm has left hundreds of <countrian1> people without a home. Serious damage was inflicted by the 
+                  "storm.")		
+D_sto3 = Event(1, "A mild storm has left dozens of <countrian1> people without a home. Sustainable damage was inflicted by the storm.")
+	
+D_tra1 = Event(1, "A <countrian1> passenger train has derailed in <province1>. There are dozens of causalties and hundreds of wounded "
+                  "passengers.")
+D_tra2 = Event(1, "Two <countrian1> passenger trains have collided to each other in <province1>. There are hundreds of causalties and "
+                  "wounded passengers.")
+# D_tra3 - [Income from <supplycenter1> will be delayed to next year.]
+D_tra3 = Event(1, "A <countrian1> cargo train has derailed in <supplycenter1>. The crew has died, but the tons of cargo that was lost "
+                  "in the derailment will be recovered in next weeks.")
+####################################################################################################
+## FORTUNES 
+F_gol1 = Event(1, "<countrian1> cartographers have accidentally found a gold vein in <province1> while marking the area. It looks "
+                  "promising to investigate further.")
+
+F_oil1 = Event(1, "A plentiful oil reserve has been found in <province1>. The reserve will not only boost <country1>'s economy, but "
+                  "also bring stability.")
+
+F_har1 = Event(1, "Last season's exceptionally good harvest has filled the <countrian1> granaries to the brim. It will provide much "
+                  "needed stability to <country1>.")
+F_har2 = Event(1, "Last season's exceptionally good harvest has filled the <countrian1> granaries to the brim. It will provide "
+                  "<country1> with opportunities to trade.")
+####################################################################################################
+## NEUTRALS
+N_oil1 = Event(0, "A plentiful oil reserve has been found in <province0>. Both the reserve and the province will surely become a "
+                  "rewarding target to surrounding countries.")
+# uni stands for "unique", for specific provinces.
+N_uni1 = Event(0, "After break up of the Union the state of Utah was never the same. After numerous sessions the Utahn government, "
+                  "with titanic Mormon influence, reforms it to Deseret - a Mormon-run theocratic state.")
 ####################################################################################################
 
 all = [one1, one2, one3, one4, one5_1, one5_2, one5_3, one6, one7, one8, one9]
