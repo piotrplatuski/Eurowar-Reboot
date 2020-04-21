@@ -117,9 +117,9 @@ VP_com1 = Event(1, "The communism has brought long-sought equality to <countrian
                    "plentiful... and propaganda is more intricate than ever before.")
 VP_fas1 = Event(1, "The government in <country1> works like a well-oiled machine. Dissidents are effectively suppressed, economy is "
                    "blooming and people are very supportive of the fascist rule.")
-VP_mon1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under His rule both nobles and commoners are content, military is "
+VP_mon1 = Event(1, "<ruler1> is well-beloved monarch in <country1>. Under Hisrule both nobles and commoners are content, military is "
                    "ready to fight for their <rulertype1>, while the Cabinet of Ministers is ready to ensure <rulertype1>'s will.")
-VP_rep1 = Event(1, "Citizens of <country1> are proud of their rights granted by amendments in the constitution, while the <countrian1> "
+VP_rep1 = Event(1, "Citizens of <country1> are proud of their rights grantedby amendments in the constitution, while the <countrian1> "
                    "institutions are an example to the rest of world.")
 ####################################################################################################
 # DISASTERS
@@ -157,8 +157,32 @@ F_har1 = Event(1, "Last season's exceptionally good harvest has filled the <coun
 F_har2 = Event(1, "Last season's exceptionally good harvest has filled the <countrian1> granaries to the brim. It will provide "
                   "<country1> with opportunities to trade.")
 ####################################################################################################
+# POLITICS
+P_pro1 = Event(1, "<man1>, a minister of <country1>, has made provoking remarks towards the general public. A demonstration was held "
+	         "in <capital1> by some furious citizens.")
+
+P_kni1 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately the minister was carrying "
+	          "a revolver and killed the attacker.")
+# I think high stability in such cases should be 6 and more than 6 as that number is high enough. Low stability 5 or below.
+# High stability Republic & Monarchy version (low stab is kni1):
+P_kni2 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately for the minister, a "
+	          "passerby, who was carrying a revolver, heard the commotion. He came and killed the attacker.")
+# High stability Fascism (low stab is kni1):
+P_kni3 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately for the minister, "
+		  "Commandant <surname>, who was carrying a revolver, heard the commotion. He came and killed the attacker.")
+# Low stability Communism (high stab is kni1):
+P_kni4 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Unortunately for the minister, a "
+	          "passerby, who was also carrying a knife, heard the commotion. He came and they both killed the minister.")
+####################################################################################################
+#  MILITARY
+M_cou1 = Event(1, "A troop of <countrian1> military forces attempted to overthrow <rulertype1> <ruler1>, but the <rulertype1>'s "
+		  "guardsmen have stopped them. Interrogations revealed Gen. <surname1> as the author of the coup.")
+# Monarchy version:
+M_cou2 = Event(1, "A troop of <countrian1> military forces attempted to overthrow <rulertype1> <ruler1>, but the Royal Guard has "
+	          "stopped them. Interrogations revealed Gen. <surname1> as the author of the coup.")
+####################################################################################################
 # NEUTRALS
-F_gol1 = Event(0, "Local cartographers have accidentally found a gold vein in <province0> while marking the area. It looks promising "
+N_gol1 = Event(0, "Local cartographers have accidentally found a gold vein in <province0> while marking the area. It looks promising "
                   "to investigate further.")
 
 N_oil1 = Event(0, "A plentiful oil reserve has been found in <province0>. Both the reserve and the province will surely become a "
