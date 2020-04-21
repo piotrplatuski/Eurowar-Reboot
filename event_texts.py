@@ -173,6 +173,13 @@ P_kni3 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed
 # Low stability Communism (high stab is kni1):
 P_kni4 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Unortunately for the minister, a "
 	          "passerby, who was also carrying a knife, heard the commotion. He came and they both killed the minister.")
+
+P_ins1 = Event(2, "A <countrian1> politician has insulted <countrian2> <rulertype2> <ruler2>, and disapproved of his recent policies.")
+
+P_for1 = Event(2, "The foreign ministers of <country1> and <country2> have met in <capital1>. They seemed to understand each other "
+	          "well and wish to cooperate where it is possible.")
+P_for2 = Event(2, "The foreign ministers of <country1> and <country2> have met in <capital1>. They didn't go along very well and the "
+	          "whole meeting felt forced and out of place.")
 ####################################################################################################
 #  MILITARY
 M_cou1 = Event(1, "A troop of <countrian1> military forces attempted to overthrow <rulertype1> <ruler1>, but the <rulertype1>'s "
