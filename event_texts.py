@@ -129,7 +129,7 @@ D_nrd1 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack an
                   "news.")
 D_nrd2 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack and passed away. The nation is mourning their late "
                   "<rulertype1>.")
-D_nrd3 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack. The <rulertype1> is dead, long live the <rulertype1>!")		
+D_nrd3 = Event(1, "<rulertype1> <ruler1> of <country1> has had a heart attack. The <rulertype1> is dead, long live the <rulertype1>!")
 
 D_sto1 = Event(1, "A ferocious storm has left thousands of <countrian1> people without a home. Devastating damage was inflicted by the "
                   "storm.")
