@@ -168,8 +168,8 @@ P_kni1 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed
 P_kni2 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately for the minister, a "
 	          "passerby, who was carrying a revolver, heard the commotion. He came and killed the attacker.")
 # High stability Fascism (low stab is kni1):
-P_kni3 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately for the minister, "
-		  "Commandant <surname>, who was carrying a revolver, heard the commotion. He came and killed the attacker.")
+P_kni3 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Fortunately for the minister, an"
+		  "officer, who was carrying a revolver, heard the commotion. He came and killed the attacker.")
 # Low stability Communism (high stab is kni1):
 P_kni4 = Event(1, "A minister of <country1>, <man1>, was attacked by a man armed with a knife. Unortunately for the minister, a "
 	          "passerby, who was also carrying a knife, heard the commotion. He came and they both killed the minister.")
