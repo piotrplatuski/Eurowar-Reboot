@@ -110,7 +110,20 @@ mon3 = Event(1, "Fascists, led by <name1>, have organized a massive rally from <
                 " They are now very close to the capital city.")
 # Choices: Declare a state of siege (can't have any movement to or from capital province, lose all income in capital
 # for this year), Switch to Fascism (king hands power to the fascist leader, however king stays as king).
-
+####################################################################################################
+# EVENTS BASED ON GOVERNMENT
+# Fascism
+G_fas1 = Event(1, "<ruler1> Youth, the official <country1>'s youth organization, has noticed a spike of new enlistees the last year.")
+# Monarchy
+G_mon1 = Event(1, "Important nobles from all over Americas have come to <capital1>, where influential <countrian1> noble, <man1>, has "
+	          "thrown a ball party. It even had retrievers!")
+# Republic
+G_rep1 = Event(1, "A fight has broken out in <countrian1> Parliament when the governing party and the opposition started antagonizing "
+	          "each other. The opposition was rushed to hospitals.")
+G_rep2 = Event(1, "The last <countrian1> general election has noticed a spike of voters, however, the current governing party has "
+	          "retained the majority.")
+G_rep3 = Event(1, "The <countrian1> suffragettes have held a rally in <capital1> where they demanded the right to vote for women in "
+	          "<country1>.")
 ####################################################################################################
 # VERY POSITIVE EVENTS
 VP_com1 = Event(1, "The communism has brought long-sought equality to <countrian1> people. Proletariat is finally united, produce is "
