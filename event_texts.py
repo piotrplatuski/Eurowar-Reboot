@@ -1,5 +1,15 @@
 from events import *
 ####################################################################################################
+# MONARCHY - UNIQUE
+MU_ass = Event(1, "Heir to the throne has been assassinated as he was being driven around <capital1>. The assassin was identified as "
+	          "<name1> who had previously expressed anti-monarchist remarks. Rumor has it that he was helped by someone close to "
+	          "the royal family.")
+MU_com = Event(1, "Working class protesters of <country1>, led by promises of equality and better future for the working class, have "
+	          "stormed and taken over the royal palace. The royal family was murdered in cold blood. Only <ruler1> was spared of "
+	          "this fate as he was outside <capital1> during this event.")
+MU_fas = Event(1, "Fascists, led by <name1>, have organized a massive rally from <province1> to <capital1>. As they passed through "
+	          "villages and towns their numbers have progresively increased. They are now very close to the capital city."
+####################################################################################################
 # EVENTS BASED ON GOVERNMENT
 # Fascism
 G_fas1 = Event(1, "<ruler1> Youth, the official <country1>'s youth organization, has noticed a spike of new enlistees the last year.")
