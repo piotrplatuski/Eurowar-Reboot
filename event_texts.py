@@ -115,7 +115,7 @@ N_uni1 = Event(0, "After break up of the Union the state of Utah was never the s
 N_uni2 = Event(0, "A Kansas man has been proposing to split Kansas state into two states - Kansas and Kansas City states. It has "
 	          "garnered a lot of support, however, it wasn't enough to be considered by Kansas Government.")
 N_uni3 = Event(0, "The Imperial Japanese Navy, under pretext of protecting huge local Japanese population, has invaded and taken over "
-	          "Hawaii. While Hawaii won't be incorporated fully to the Japanese Empire just yet, it already was granted "
+	          "Hawaii. While Hawaii won't be incorporated to the Japanese Empire fully just yet, it already was granted "
 	          "administrative level of a prefecture.")
 
 N_mis1 = Event(0, "The creator of knock knock joke has won a Nobel prize.")
