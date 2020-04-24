@@ -9,6 +9,9 @@ MU_com = Event(1, "Working class protesters of <country1>, led by promises of eq
 	          "this fate as he was outside <capital1> during this event.")
 MU_fas = Event(1, "Fascists, led by <name1>, have organized a massive rally from <province1> to <capital1>. As they passed through "
 	          "villages and towns their numbers have progresively increased. They are now very close to the capital city."
+#	          "Declare state of siege.  [A unit must be in capital by the New Year, otherwise -1 stability.]" 
+	          # If there is no unit in capital then one has to arrive before year ends for government to stay Monarchy
+#	          "Let them come. [Government changes to Fascism. No unit movement for one season.]"
 ####################################################################################################
 # EVENTS BASED ON GOVERNMENT
 # Fascism
