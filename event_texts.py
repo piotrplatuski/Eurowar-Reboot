@@ -83,7 +83,10 @@ P_for1 = Event(2, "The foreign ministers of <country1> and <country2> have met i
 P_for2 = Event(2, "The foreign ministers of <country1> and <country2> have met in <capital1>. They didn't go along very well and the "
 	          "whole meeting felt forced and out of place.")
 ####################################################################################################
-#  MILITARY
+# ECONOMY
+E_boo1 = Event(1, "The <countrian1> economy has been experiencing a significant boost lately as the exports to other countries grow.")
+####################################################################################################
+# MILITARY
 M_cou1 = Event(1, "A troop of <countrian1> military forces attempted to overthrow <rulertype1> <ruler1>, but the <rulertype1>'s "
 		  "guardsmen have stopped them. Interrogations revealed Gen. <surname1> as the author of the coup.")
 # Monarchy version:
