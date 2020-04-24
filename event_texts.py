@@ -102,6 +102,10 @@ N_oil1 = Event(0, "A plentiful oil reserve has been found in <province0>. Both t
 # uni stands for "unique", for specific provinces.
 N_uni1 = Event(0, "After break up of the Union the state of Utah was never the same. After numerous sessions the Utahn government, "
                   "with titanic Mormon influence, reforms it to Deseret - a Mormon-run theocratic state.")
+N_uni2 = Event(0, "A Kansas man has been proposing to split Kansas state into two states - Kansas and Kansas City states. It has "
+	          "garnered a lot of support, however, it wasn't enough to be considered in Kansas Government.")
+
+N_mis1 = Event(0, "The creator of knock knock joke has won a Nobel prize.")
 ####################################################################################################
 
 all = [one1, one2, one3, one4, one5_1, one5_2, one5_3, one6, one7, one8, one9]
