@@ -116,7 +116,7 @@ N_uni2 = Event(0, "A Kansas man has been proposing to split Kansas state into tw
 	          "garnered a lot of support, however, it wasn't enough to be considered by Kansas Government.")
 N_uni3 = Event(0, "The Imperial Japanese Navy, under pretext of protecting huge local Japanese population, has invaded and taken over "
 	          "Hawaii. While Hawaii won't be incorporated fully to the Japanese Empire just yet, it already was granted "
-	          "administrative level of Prefecture.")
+	          "administrative level of a prefecture.")
 
 N_mis1 = Event(0, "The creator of knock knock joke has won a Nobel prize.")
 ####################################################################################################
